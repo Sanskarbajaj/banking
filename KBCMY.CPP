@@ -1,5 +1,6 @@
 #include<iostream.h>
 #include<conio.h>
+#include<string.h>
 #include<process.h>
 #include<dos.h>
 #include<graphics.h>
@@ -24,6 +25,7 @@ kbc()
    }
     void welcome()
     {    clrscr();
+
 
 
 	  for(int i=0;i<240;i++)
@@ -55,6 +57,10 @@ kbc()
 	cin>>name;
 	cprintf("\n ENTER AGE");
 	cin>>age;
+	if(age<18)
+	{  clrscr();
+	cprintf("unable to register");
+	}
 	cprintf("\n ENTER COUNTRY");
 	cin>>country;
 	delay(3000);
@@ -105,17 +111,17 @@ cprintf("REGISTERED SUCCESSFULLY"); delay(1000); cprintf("*");  delay(1000); cpr
     cout<<"                                ";
     cout<<"                                ";
     delay(2000);
-    cout<<"*"; delay(2500);
+    cout<<""; delay(2500);
     cout<<"\n 1. There are three options 1,2&3 you have to press only 1 2 and3";
-   cout<<"*"; delay(2500);
+   cout<<""; delay(2500);
     cout<<"\n 2. Each correct answer gives you money";
-   cout<<"*"; delay(2500);
+   cout<<""; delay(2500);
    cout<<"\n 3. There is only 1 lifeline you can use to continue your game";
-  cout<<"*"; delay(2500);
+  cout<<""; delay(2500);
    cout<<"\n 4. That lifeline will give you one more chance for same question";
-  cout<<"*"; delay(2500);
+  cout<<""; delay(2500);
    cout<<"\n 5. And at last there will be bumper question worth 50,000 rs";
-  cout<<"*"; delay(2500);
+  cout<<""; delay(2500);
   cout<<"\n 6. User can play or leave the Bumper Question";
   gotoxy(50,17);
   cout<<"Terms and Conditions Applied";
@@ -144,21 +150,18 @@ cprintf("REGISTERED SUCCESSFULLY"); delay(1000); cprintf("*");  delay(1000); cpr
     money=money+1000;
     getch();
     clrscr();
+     int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+
+    setbkcolor(BLACK);
+    closegraph();
     }
     else
     {
     cout<<"\n afsos aapka hamara safar khatam";
-   // goto xy;
+
     delay(2000);
-		 textcolor(YELLOW);
-	cprintf(" NAME IS  ");
-	 cout<<name;
-	cprintf(" AGE IS  ");
-	cout<<age;
-	cprintf(" COUNTRY IS ");
-	cout<<country;
-	cprintf("TOTAL MONEY IS = ");
-	cout<<money;
+	showdetails();
 	getch();
 	exit(1);
     }
@@ -179,23 +182,19 @@ cprintf("REGISTERED SUCCESSFULLY"); delay(1000); cprintf("*");  delay(1000); cpr
     cout<<"\n Jeet gae h 2000 rs";
     money=money+2000;
      getch();
-    clrscr();
+    clrscr();   int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+
+    setbkcolor(BLACK);
+    closegraph();
 
     }
     else
     {
     cout<<"\n afsos aapka hamara safar yhi khatam";
-   // goto xy;
+
     delay(2000);
-		 textcolor(YELLOW);
-	cprintf(" NAME IS  ");
-	 cout<<name;
-	cprintf(" AGE IS  ");
-	cout<<age;
-	cprintf(" COUNTRY IS ");
-	cout<<country;
-	cprintf("TOTAL MONEY IS = ");
-	cout<<money;
+	showdetails();
 	getch();
 	exit(1);
     }
@@ -215,25 +214,20 @@ cprintf("REGISTERED SUCCESSFULLY"); delay(1000); cprintf("*");  delay(1000); cpr
     cout<<"\n jeet gae h 3000 rs";
     money=money+3000;
      getch();
-    clrscr();
+    clrscr(); int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
 
+    setbkcolor(BLACK);
+    closegraph();
     getch();
     clrscr();
     }
     else
     {
     cout<<"\n afsos aapka hamara safar khatam";
-   // goto xy;
+
     delay(2000);
-		 textcolor(YELLOW);
-	cprintf(" NAME IS  ");
-	 cout<<name;
-	cprintf(" AGE IS  ");
-	cout<<age;
-	cprintf(" COUNTRY IS ");
-	cout<<country;
-	cprintf("TOTAL MONEY IS = ");
-	cout<<money;
+	showdetails();
 	getch();
 	exit(1);
     }
@@ -257,22 +251,19 @@ cprintf("REGISTERED SUCCESSFULLY"); delay(1000); cprintf("*");  delay(1000); cpr
     cout<<"\n jeet gae h 4000 rs";
     money=money+4000;
     getch();
-    clrscr();
-    }
+    clrscr(); int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+
+    setbkcolor(BLACK);
+    closegraph();
+
+ }
     else
     {
     cout<<"\n afsos aapka hamara safar khatam";
-  //  goto xy;
+
     delay(2000);
-		 textcolor(YELLOW);
-	cprintf(" NAME IS  ");
-	 cout<<name;
-	cprintf(" AGE IS  ");
-	cout<<age;
-	cprintf(" COUNTRY IS ");
-	cout<<country;
-	cprintf("TOTAL MONEY IS = ");
-	cout<<money;
+	showdetails();
 	getch();
 	exit(1);
     }
@@ -294,22 +285,19 @@ cprintf("REGISTERED SUCCESSFULLY"); delay(1000); cprintf("*");  delay(1000); cpr
     cout<<"\n jeet gae h 5000 rs";
     money=money+5000;
     getch();
-    clrscr();
+    clrscr();  int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+
+    setbkcolor(BLACK);
+    closegraph();
+
     }
     else
     {
     cout<<"\n afsos aapka hamara safar khatam";
-   // goto xy;
+
     delay(2000);
-		 textcolor(YELLOW);
-	cprintf(" NAME IS  ");
-	 cout<<name;
-	cprintf(" AGE IS  ");
-	cout<<age;
-	cprintf(" COUNTRY IS ");
-	cout<<country;
-	cprintf("TOTAL MONEY IS = ");
-	cout<<money;
+	showdetails();
 	getch();
 	exit(1);
     }
@@ -329,21 +317,18 @@ cprintf("REGISTERED SUCCESSFULLY"); delay(1000); cprintf("*");  delay(1000); cpr
     money=money+6000;
     getch();
     clrscr();
-    }
+  int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+
+    setbkcolor(BLACK);
+    closegraph();
+     }
     else
     {
     cout<<"\n afsos aapka hamara safar khatam";
-   // goto xy;
+
     delay(2000);
-		 textcolor(YELLOW);
-	cprintf(" NAME IS  ");
-	 cout<<name;
-	cprintf(" AGE IS  ");
-	cout<<age;
-	cprintf(" COUNTRY IS ");
-	cout<<country;
-	cprintf("TOTAL MONEY IS = ");
-	cout<<money;
+	showdetails();
 	getch();
 	exit(1);
     }
@@ -363,21 +348,18 @@ cprintf("REGISTERED SUCCESSFULLY"); delay(1000); cprintf("*");  delay(1000); cpr
     money=money+7000;
     getch();
     clrscr();
-    }
+   int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+
+    setbkcolor(BLACK);
+    closegraph();
+     }
     else
     {
     cout<<"\n afsos aapka hamara safar khatam";
-  //  goto xy;
+
     delay(2000);
-		 textcolor(YELLOW);
-	cprintf(" NAME IS  ");
-	 cout<<name;
-	cprintf(" AGE IS  ");
-	cout<<age;
-	cprintf(" COUNTRY IS ");
-	cout<<country;
-	cprintf("TOTAL MONEY IS = ");
-	cout<<money;
+	showdetails();
 	getch();
 	exit(1);
     }
@@ -397,21 +379,18 @@ cprintf("REGISTERED SUCCESSFULLY"); delay(1000); cprintf("*");  delay(1000); cpr
     money=money+8000;
     getch();
     clrscr();
-    }
+  int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+
+    setbkcolor(BLACK);
+    closegraph();
+     }
     else
     {
     cout<<"\n afsos aapka hamara safar khatam";
-   // goto xy;
+
     delay(2000);
-		 textcolor(YELLOW);
-	cprintf(" NAME IS  ");
-	 cout<<name;
-	cprintf(" AGE IS  ");
-	cout<<age;
-	cprintf(" COUNTRY IS ");
-	cout<<country;
-	cprintf("TOTAL MONEY IS = ");
-	cout<<money;
+	showdetails();
 	getch();
 	exit(1);
     }
@@ -431,21 +410,18 @@ cprintf("REGISTERED SUCCESSFULLY"); delay(1000); cprintf("*");  delay(1000); cpr
     money=money+9000;
     getch();
     clrscr();
-    }
+  int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+
+    setbkcolor(BLACK);
+    closegraph();
+      }
     else
     {
     cout<<"\n afsos aapka hamara safar khatam";
-   // goto xy;
+
    delay(2000);
-		 textcolor(YELLOW);
-	cprintf(" NAME IS  ");
-	 cout<<name;
-	cprintf(" AGE IS  ");
-	cout<<age;
-	cprintf(" COUNTRY IS ");
-	cout<<country;
-	cprintf("TOTAL MONEY IS = ");
-	cout<<money;
+	showdetails();
 	getch();
 	exit(1);
        }
@@ -465,21 +441,18 @@ cprintf("REGISTERED SUCCESSFULLY"); delay(1000); cprintf("*");  delay(1000); cpr
     money=money+10000;
     getch();
     clrscr();
-    }
+    int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+
+    setbkcolor(BLACK);
+    closegraph();
+
+   }
     else
     {
     cout<<"\n afsos aapka hamara safar khatam";
-//    goto xy;
 delay(2000);
-		 textcolor(YELLOW);
-	cprintf(" NAME IS  ");
-	 cout<<name;
-	cprintf(" AGE IS  ");
-	cout<<age;
-	cprintf(" COUNTRY IS ");
-	cout<<country;
-	cprintf("TOTAL MONEY IS = ");
-	cout<<money;
+	showdetails();
 	getch();
 	exit(1);
     }
@@ -492,7 +465,7 @@ delay(2000);
 	cout<<"\n                y/n ???       ";
 	cin>>x;
 	if(x=='y')
-	{ cout<<"\n New Language For Android App Development";\
+	{ cout<<"\n New Language For Android App Development";
 	cout<<"\n options are..";
 	cout<<"\n 1.Java     2.Kotlin   3.Python";
 	cin>>ans;
@@ -517,15 +490,7 @@ delay(2000);
 	{
 	cout<<"\n afsos ke sath aapka hmara safar khatam";
 	     delay(2000);
-		 textcolor(YELLOW);
-	cprintf(" NAME IS  ");
-	 cout<<name;
-	cprintf(" AGE IS  ");
-	cout<<age;
-	cprintf(" COUNTRY IS ");
-	cout<<country;
-	cprintf("TOTAL MONEY IS = ");
-	cout<<money;
+	     showdetails();
 	getch();
 	exit(1);
  }
@@ -539,57 +504,103 @@ delay(2000);
      gotoxy(40,16);
     cout<<"Thanks for Playing ";
     }
- //   void showdetails()
-  //  {
+    void showdetails()
+   {
+	 textcolor(YELLOW);
+	cprintf(" NAME IS  ");
+	 cout<<name;
+	cprintf(" AGE IS  ");
+	cout<<age;
+	cprintf(" COUNTRY IS ");
+	cout<<country;
+	cprintf("TOTAL MONEY IS = ");
+	cout<<money;
 
-   //	 textcolor(YELLOW);
-     //	cprintf(" NAME IS  ");
-       //	 cout<<name;
-//	cprintf(" AGE IS  ");
-  //	cout<<age;
-    //	cprintf(" COUNTRY IS ");
-      //	cout<<country;
-       //	cprintf("TOTAL MONEY IS = ");
-       //	cout<<money;
-
-//    }
-
-
-};
-int main()
-{
-clrscr();
-
-int gd=DETECT,gm;
+    }
+    void swagat()
+    {
+    int gd=DETECT,gm;
 initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
 setcolor(YELLOW);
 setbkcolor(MAGENTA);
 settextstyle(3,0,5);
-outtextxy(35,35,"SWAGAT HAI AAPKA KBC MEIN... ");
+outtextxy(35,35,"SWAGAT HAI AAPKA KBC MEIN...\a \a \a ");
 for(int j=0;j<=100;j++)
 { delay(100);
 circle(100+j,300,100);
 }      settextstyle(4,0,3);
 outtextxy(100,420,"PRESS ENTER TO CONTINUE...");
+    getch();
+    closegraph();
+    clrscr();
+    }
 
- //  kbc obj;
-  //  obj.welcome();
- //   obj.registration();
-//	ofstream of;
-     //	of.open("databases.doc",ios::out|ios::app);
-   //	of<<obj.name<<"\n";
-   //	of<<obj.age<<"\n";
-   //	of<<obj.country<<"\n";
-   //	of<<"\n \n ";
-  //	of.close();
-//   obj.loading();
-//  clrscr();
-//  obj.rules();
- //  clrscr();
- //  obj.questions();
- //   obj.bumper();
-//    obj.thanks();
-  // obj.showdetails();
-  getch();
+    void pass()
+    {
+     char passwd[20]="07a1AsK";
+     gotoxy(0,9);
+     textcolor(RED);
+     cprintf("AUTO CAPTCHA GRENERATOR------>(07a1AsK)");
+     cout<<"\n";
+     cout<<"enter the  captcha to move into game";
+     gotoxy(33,8);
+     cout<<"enter the captcha"<<endl;
+     gotoxy(33,10);
+     cin>>passwd;
+     if(strcmp(passwd,"07a1AsK")==0)
+   {
+     cout<<"you are not a robot"<<endl;
+     textcolor(CYAN);
+     cprintf("correct password");
+     getch();
+     cout<<"press ENTER to continue";
+		   textcolor(YELLOW);
+     cout<<endl;
+     clrscr();
+     }
+     else
+    {
+     cout<<"invalid password";
+     delay(2000);
+     cout<<"wanna try again  y/n";
+     char cm;
+     if(cm=='y')
+     pass();
+     else
+     exit(1);
+	}
+	}
+	 void lifeline()
+	 {
+       static int lyf=3;
+	lyf=lyf-1;
+	}
+
+};
+int main()
+{
+ clrscr();
+  kbc obj;
+ obj.questions();
+ // obj.pass();
+// obj.swagat();
+ //  obj.welcome();
+  //  obj.registration();
+    /*	ofstream of;
+	of.open("databases.doc",ios::out|ios::app);
+	of<<obj.name<<"\n";
+	of<<obj.age<<"\n";
+	of<<obj.country<<"\n";
+	of<<"\n \n ";
+	of.close();
+    obj.loading();
+   clrscr();
+    obj.rules();
+     clrscr();
+    obj.questions();
+    obj.bumper();
+  obj.thanks();
+  // obj.showdetails(); */
+    getch();
     return 0;
 }

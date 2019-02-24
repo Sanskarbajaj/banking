@@ -133,7 +133,10 @@ cprintf("REGISTERED SUCCESSFULLY"); delay(1000); cprintf("*");  delay(1000); cpr
     cout<<"\n options are...";
     delay(2000);
     cout<<"\n  1. CPU           2. MOUSE           3. KEYBOARD";
-    cout<<"\n choose from 1  2 and 3";
+    cout<<"\n choose from 1  2 and 3"<<endl;
+    lifeline(1);
+     cout<<endl;
+     cout<<"now answer the ques ";
     cin>>ans;
     if(ans==1)
     {      textcolor(CYAN);
@@ -165,7 +168,10 @@ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
     cout<<"\n options are...";
     delay(2000);
     cout<<"\n  1. ARRAYS           2. SRTINGS           3. CLASSES";
-    cout<<"\n choose from 1  2 and 3";
+    cout<<"\n choose from 1  2 and 3"<<endl;
+    lifeline(2);
+     cout<<endl;
+     cout<<"now answer the ques ";
     cin>>ans;
     if(ans==2)
     {
@@ -196,8 +202,11 @@ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
     delay(2000);
     cout<<"\n options are...";
     delay(2000);
-    cout<<"\n  1.struc. query lang.   2.stand.query lang 3.none of these";
-    cout<<"\n choose from 1  2 and 3";
+    cout<<"\n  1.strum. query lang.   2.stand.query lang 3.none of these";
+    cout<<"\n choose from 1  2 and 3"<<endl;
+    lifeline(3);
+     cout<<endl;
+     cout<<"now answer the ques ";
     cin>>ans;
     if(ans==3)
     {
@@ -233,7 +242,10 @@ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
     cout<<"\n options are...";
     delay(2000);
     cout<<"\n  1. DATABASES     2.DATASTRUCTURES    3.DATATYPES";
-    cout<<"\n choose from 1  2 and 3";
+    cout<<"\n choose from 1  2 and 3"<<endl;
+    lifeline(3);
+     cout<<endl;
+     cout<<"now answer the ques ";
     cin>>ans;
     if(ans==3)
     {
@@ -268,7 +280,10 @@ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
     cout<<"\n options are...";
     delay(2000);
     cout<<"\n  1. YES           2.NO           3.CAN'T SAY";
-    cout<<"\n choose from 1  2 and 3";
+    cout<<"\n choose from 1  2 and 3"<<endl;
+    lifeline(2);
+     cout<<endl;
+     cout<<"now answer the ques ";
     cin>>ans;
     if(ans==2)
     {  textcolor(CYAN);
@@ -299,7 +314,10 @@ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
     cout<<"\n options are...";
     delay(2000);
     cout<<"\n  1.PARMANENT    2.NON VOLATILE    3.VOLATILE";
-    cout<<"\n choose from 1  2 and 3";
+    cout<<"\n choose from 1  2 and 3"<<endl;
+    lifeline(3);
+     cout<<endl;
+     cout<<"now answer the ques ";
     cin>>ans;
     if(ans==3)
     {  textcolor(CYAN);
@@ -330,7 +348,10 @@ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
     cout<<"\n options are...";
     delay(2000);
     cout<<"\n  1.POLYMORPHISM   2.ABSTRACTION 3.INHERITANCE";
-    cout<<"\n choose from 1  2 and 3";
+    cout<<"\n choose from 1  2 and 3"<<endl;
+    lifeline(3);
+     cout<<endl;
+     cout<<"now answer the ques ";
     cin>>ans;
     if(ans==3)
     {  textcolor(CYAN);
@@ -361,7 +382,10 @@ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
     cout<<"\n options are...";
     delay(2000);
     cout<<"\n  1.(||)        2.(::)	   3. (%)";
-    cout<<"\n choose from 1  2 and 3";
+    cout<<"\n choose from 1  2 and 3"<<endl;
+    lifeline(2);
+     cout<<endl;
+     cout<<"now answer the ques ";
     cin>>ans;
     if(ans==2)
     {  textcolor(CYAN);
@@ -392,7 +416,10 @@ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
     cout<<"\n options are...";
     delay(2000);
     cout<<"\n  1. (4)        2. (6)        3. (2)";
-    cout<<"\n choose from 1  2 and 3";
+    cout<<"\n choose from 1  2 and 3"<<endl;
+    lifeline(1);
+     cout<<endl;
+     cout<<"now answer the ques ";
     cin>>ans;
     if(ans==1)
     {  textcolor(CYAN);
@@ -423,9 +450,12 @@ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
     cout<<"\n options are...";
     delay(2000);
     cout<<"\n  1.COMPILER        2.LINKER           3. LOADER";
-    cout<<"\n choose from 1  2 and 3";
+    cout<<"\n choose from 1  2 and 3"<<endl;
+    lifeline(1);
+     cout<<endl;
+     cout<<"now answer the ques ";
     cin>>ans;
-    if(ans==2)
+    if(ans==1)
     {  textcolor(CYAN);
     cprintf("\n  ADHBUDH...");
     cout<<"\n JEET GAE HAI 10000 RS";
@@ -460,14 +490,29 @@ outtextxy(45,35," BUMPER QUESTION..");
     getch();
     setcolor(YELLOW);
     gotoxy(55,9);
-       cout<<" \n WANNA PLAY BUMPER QUESTION WORTH 50,000 Rs.";
+       cout<<" \n WANNA PLAY BUMPER QUESTION WORTH 50,000 Rs."<<endl;
 	cout<<"\n                y/n ???       ";
 	cin>>x;
-
+		 cout<<"You Have only 30 Secs To Answer"<<endl;
+		 delay(2000);
+		 cout<<"and 8 sec to read the ques";
+		 delay(1700);
 	if(x=='y')
 	{ cout<<"\n New Language For Android App Development";
 	cout<<"\n options are..";
-	cout<<"\n 1.Java     2.Kotlin   3.Python";
+	cout<<"\n 1.Java     2.Kotlin   3.Python"<<endl;
+/*	cout<<"READ THE QUES FAST"<<endl; delay(8000);
+	cout<<"timer starts now and think answer"<<endl;
+  textcolor(BLACK);	for(int i=30;i>0;i--)
+{
+  textcolor(BLACK);
+gotoxy(17,38);
+cout<<i;
+clrscr();
+delay(600);
+
+}                                                          setcolor(BLACK);
+	   outtextxy(300,300,"Now Answer The Question!!!");  */
 	cin>>ans;
 	if(ans==2)
 	{ cout<<"\n Sahi Jawaab Mubarak Ho";
@@ -559,14 +604,14 @@ setbkcolor(BLUE);
     getch();
     cleardevice();
     setcolor(YELLOW);
-    outtextxy(250,195,"LOADING");
+    outtextxy(250,195,"LOADING...");
     setcolor(GREEN);
     for(int i=1;i<190;i++)
     { setcolor(GREEN);
      delay(60);
     rectangle(210+i,170,210,190);
     }
-
+		   cleardevice();
 	closegraph();
     }
     void pass()
@@ -582,30 +627,61 @@ setbkcolor(BLUE);
      }
      cout<<endl;
      cout<<"ENTER THE CAPTCHA "<<endl;
-     char p[7];   // int found=0;
-      cin>>p;
+     char p[7];
+     int found=1;
+     for(j=0;j<7;j++)
+      {
+      cin>>p[j];
+	}
+	for(j=0;j<7;j++)
+	{
+	if(passwd[j]==p[j])
+	{
+	found=0;
+	}
+	}
+	if(found==0)
+	{
+	cout<<"You Are Not A Robot::"<<endl;
+		    delay(1500);
+		       int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
 
-       if(strcmp(p,passwd)==0)
-       {
-     cout<<"You Are Not A Robot";
-     getch();
-     }
-     else
-    {
-     cout<<"invalid captcha try again";
-     getch();
-     exit(1);
+setcolor(GREEN);
+circle(210,120,40);
+line(180,120,200,140);
+delay(1000);
+line(200,140,240,100);
+setcolor(GREEN);
+settextstyle(3,0,5);
+outtextxy(170,160,"VERIFIED..");
+getch();
+cleardevice();
+closegraph();
+	getch();
+	}
+	else
+	{cout<<"Invalid Captcha"<<endl;delay(1000);
+	cout<<"Exiting From Program"<<endl;
+	getch();
+	exit(1);
 	}
 	}
 	 void lifeline(int z)
-	 {
+	 {         char val;
 	  static  unsigned int lyf=3;
+	  cout<<"wanna try lifeline y/n ??";
+	  cin>>val;
+	  if(val=='y')
+	  {
 	  if(lyf!=0)
 	  cout<<" Answer From EXPERT Is"<<z;
 	  else
 	  cout<<"No Lifeline Left";
 	lyf=lyf-1;
 	}
+	}
+
 
 
 };
@@ -613,10 +689,11 @@ int main()
 {
  clrscr();
   kbc obj;
+  obj.bumper();
+
  // obj.pass();
-  obj.starter();
-// obj.pass();
- obj.swagat();
+ // obj.starter();
+/* obj.swagat();
    obj.welcome();
     obj.registration();
 	ofstream of;
@@ -633,7 +710,7 @@ int main()
     obj.questions();
     obj.bumper();
   obj.thanks();
-  // obj.showdetails();
+  // obj.showdetails(); */
     getch();
     return 0;
 }

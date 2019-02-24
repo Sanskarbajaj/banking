@@ -557,7 +557,17 @@ setbkcolor(BLUE);
     gotoxy(45,27);
     cout<<"press Enter to continue";
     getch();
-    closegraph();
+    cleardevice();
+    setcolor(YELLOW);
+    outtextxy(250,195,"LOADING");
+    setcolor(GREEN);
+    for(int i=1;i<190;i++)
+    { setcolor(GREEN);
+     delay(60);
+    rectangle(210+i,170,210,190);
+    }
+
+	closegraph();
     }
     void pass()
     {
@@ -568,26 +578,23 @@ setbkcolor(BLUE);
      for(int j=0;j<7;j++)
      {
      passwd[j]=(rand()%26)+65;
-     cout<<"."<<passwd[j];
+     cout<<passwd[j];
      }
      cout<<endl;
      cout<<"ENTER THE CAPTCHA "<<endl;
-     char p[7];    int found=0;
+     char p[7];   // int found=0;
       cin>>p;
 
-       if(strcmp(p,passwd)==0);
-	  found=1;
-
-     if(found==1)
-     {
+       if(strcmp(p,passwd)==0)
+       {
      cout<<"You Are Not A Robot";
      getch();
      }
      else
     {
-     cout<<"invalid captcha";
-getch();
-exit(1);
+     cout<<"invalid captcha try again";
+     getch();
+     exit(1);
 	}
 	}
 	 void lifeline(int z)
@@ -606,9 +613,9 @@ int main()
 {
  clrscr();
   kbc obj;
-  obj.pass();
+ // obj.pass();
   obj.starter();
-/* obj.pass();
+// obj.pass();
  obj.swagat();
    obj.welcome();
     obj.registration();
@@ -626,7 +633,7 @@ int main()
     obj.questions();
     obj.bumper();
   obj.thanks();
-  // obj.showdetails(); */
+  // obj.showdetails();
     getch();
     return 0;
 }

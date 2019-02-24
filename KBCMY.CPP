@@ -1,12 +1,4 @@
-#include<iostream.h>
-#include<conio.h>
-#include<string.h>
-#include<process.h>
-#include<dos.h>
-#include<graphics.h>
-#include<stdio.h>
-#include<stdlib.h>
-#include<fstream.h>
+#include<sanskar.h>
 class kbc
 {
 private:
@@ -220,7 +212,6 @@ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
     setbkcolor(BLACK);
     closegraph();
     getch();
-    clrscr();
     }
     else
     {
@@ -461,9 +452,18 @@ delay(2000);
 
     void bumper()
     {    char x; x='y';
+	      int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setcolor(RED);
+     settextstyle(5,0,5);
+outtextxy(45,35," BUMPER QUESTION..");
+    getch();
+    setcolor(YELLOW);
+    gotoxy(55,9);
        cout<<" \n WANNA PLAY BUMPER QUESTION WORTH 50,000 Rs.";
 	cout<<"\n                y/n ???       ";
 	cin>>x;
+
 	if(x=='y')
 	{ cout<<"\n New Language For Android App Development";
 	cout<<"\n options are..";
@@ -483,6 +483,7 @@ delay(2000);
 	cout<<country;
 	cprintf("TOTAL MONEY IS = ");
 	cout<<money;
+	closegraph();
 	getch();
 	exit(1);
 	}
@@ -528,65 +529,90 @@ outtextxy(35,35,"SWAGAT HAI AAPKA KBC MEIN...\a \a \a ");
 for(int j=0;j<=100;j++)
 { delay(100);
 circle(100+j,300,100);
-}      settextstyle(4,0,3);
-outtextxy(100,420,"PRESS ENTER TO CONTINUE...");
+}      settextstyle(5,0,5);
+outtextxy(130,420,"PRESS ENTER TO CONTINUE...");
     getch();
     closegraph();
     clrscr();
     }
+    void starter()
+    {
+     int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setcolor(YELLOW);
+setbkcolor(BLUE);
+    circle(300,250,170);
+    circle(300,250,180);
+    ellipse(300,250,0,360,30,200);
+      ellipse(300,250,0,360,200,30);
+     ellipse(300,250,0,360,38,200);
+    ellipse(300,250,0,360,200,38);
+    settextstyle(3,0,5);
+    outtextxy(80,230,"K.");
+    outtextxy(290,10,"B.");
+    outtextxy(500,230,"C.");
+    settextstyle(3,0,4);
+    outtextxy(160,230,"C R O R E P A T I");
 
+    gotoxy(45,27);
+    cout<<"press Enter to continue";
+    getch();
+    closegraph();
+    }
     void pass()
     {
-     char passwd[20]="07a1AsK";
-     gotoxy(0,9);
-     textcolor(RED);
-     cprintf("AUTO CAPTCHA GRENERATOR------>(07a1AsK)");
-     cout<<"\n";
-     cout<<"enter the  captcha to move into game";
-     gotoxy(33,8);
-     cout<<"enter the captcha"<<endl;
-     gotoxy(33,10);
-     cin>>passwd;
-     if(strcmp(passwd,"07a1AsK")==0)
-   {
-     cout<<"you are not a robot"<<endl;
-     textcolor(CYAN);
-     cprintf("correct password");
-     getch();
-     cout<<"press ENTER to continue";
-		   textcolor(YELLOW);
+    randomize();
+     char passwd[7];
+     gotoxy(30,1);
+     cout<<"Auto Captcha Generator---->"<<endl;
+     for(int j=0;j<7;j++)
+     {
+     passwd[j]=(rand()%26)+65;
+     cout<<"."<<passwd[j];
+     }
      cout<<endl;
-     clrscr();
+     cout<<"ENTER THE CAPTCHA "<<endl;
+     char p[7];    int found=0;
+      cin>>p;
+
+       if(strcmp(p,passwd)==0);
+	  found=1;
+
+     if(found==1)
+     {
+     cout<<"You Are Not A Robot";
+     getch();
      }
      else
     {
-     cout<<"invalid password";
-     delay(2000);
-     cout<<"wanna try again  y/n";
-     char cm;
-     if(cm=='y')
-     pass();
-     else
-     exit(1);
+     cout<<"invalid captcha";
+getch();
+exit(1);
 	}
 	}
-	 void lifeline()
+	 void lifeline(int z)
 	 {
-       static int lyf=3;
+	  static  unsigned int lyf=3;
+	  if(lyf!=0)
+	  cout<<" Answer From EXPERT Is"<<z;
+	  else
+	  cout<<"No Lifeline Left";
 	lyf=lyf-1;
 	}
+
 
 };
 int main()
 {
  clrscr();
   kbc obj;
- obj.questions();
- // obj.pass();
-// obj.swagat();
- //  obj.welcome();
-  //  obj.registration();
-    /*	ofstream of;
+  obj.pass();
+  obj.starter();
+/* obj.pass();
+ obj.swagat();
+   obj.welcome();
+    obj.registration();
+	ofstream of;
 	of.open("databases.doc",ios::out|ios::app);
 	of<<obj.name<<"\n";
 	of<<obj.age<<"\n";

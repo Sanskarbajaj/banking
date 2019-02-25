@@ -689,11 +689,10 @@ int main()
 {
  clrscr();
   kbc obj;
-  obj.bumper();
 
- // obj.pass();
- // obj.starter();
-/* obj.swagat();
+ obj.pass();
+  obj.starter();
+obj.swagat();
    obj.welcome();
     obj.registration();
 	ofstream of;
@@ -710,7 +709,7 @@ int main()
     obj.questions();
     obj.bumper();
   obj.thanks();
-  // obj.showdetails(); */
+
     getch();
     return 0;
 }

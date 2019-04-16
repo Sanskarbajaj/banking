@@ -52,6 +52,10 @@ kbc()
 	if(age<18)
 	{  clrscr();
 	cprintf("unable to register");
+	delay(2500);
+	cout<<"exiting from program";
+	delay(1700);
+	exit(1);
 	}
 	cprintf("\n ENTER COUNTRY");
 	cin>>country;
@@ -115,6 +119,8 @@ cprintf("REGISTERED SUCCESSFULLY"); delay(1000); cprintf("*");  delay(1000); cpr
    cout<<"\n 5. And at last there will be bumper question worth 50,000 rs";
   cout<<""; delay(2500);
   cout<<"\n 6. User can play or leave the Bumper Question";
+  cout<<""; delay(2500);
+  cout<<"\n 7. If you lose the bumper ques 20,000 rs will be deducted ";
   gotoxy(50,17);
   cout<<"Terms and Conditions Applied";
   gotoxy(45,18);
@@ -490,8 +496,8 @@ outtextxy(45,35," BUMPER QUESTION..");
     getch();
     setcolor(YELLOW);
     gotoxy(55,9);
-       cout<<" \n WANNA PLAY BUMPER QUESTION WORTH 50,000 Rs."<<endl;
-	cout<<"\n                y/n ???       ";
+       cout<<" \n       WANNA PLAY BUMPER QUESTION WORTH 50,000 Rs."<<endl;
+	cout<<"\n                         y/n ???       ";
 	cin>>x;
 		 cout<<"You Have only 30 Secs To Answer"<<endl;
 		 delay(2000);
@@ -511,8 +517,10 @@ cout<<i;
 clrscr();
 delay(600);
 
-}                                                          setcolor(BLACK);
+}
+				       setcolor(BLACK);
 	   outtextxy(300,300,"Now Answer The Question!!!");  */
+     cout<<"answer it";
 	cin>>ans;
 	if(ans==2)
 	{ cout<<"\n Sahi Jawaab Mubarak Ho";
@@ -534,6 +542,7 @@ delay(600);
 	}
 	else
 	{
+	money=money-20000;
 	cout<<"\n afsos ke sath aapka hmara safar khatam";
 	     delay(2000);
 	     showdetails();
@@ -619,6 +628,7 @@ setbkcolor(BLUE);
     randomize();
      char passwd[7];
      gotoxy(30,1);
+     textcolor(RED);
      cout<<"Auto Captcha Generator---->"<<endl;
      for(int j=0;j<7;j++)
      {
@@ -659,17 +669,23 @@ getch();
 cleardevice();
 closegraph();
 	getch();
+
 	}
 	else
 	{cout<<"Invalid Captcha"<<endl;delay(1000);
 	cout<<"Exiting From Program"<<endl;
 	getch();
 	exit(1);
+	clrscr();
 	}
 	}
 	 void lifeline(int z)
-	 {         char val;
+	 {
+
+	     char val;
 	  static  unsigned int lyf=3;
+	  gotoxy(32,9);
+	  textcolor(RED);
 	  cout<<"wanna try lifeline y/n ??";
 	  cin>>val;
 	  if(val=='y')
@@ -679,7 +695,10 @@ closegraph();
 	  else
 	  cout<<"No Lifeline Left";
 	lyf=lyf-1;
+	getch();
 	}
+	else
+	delay(1000);
 	}
 
 
@@ -689,10 +708,11 @@ int main()
 {
  clrscr();
   kbc obj;
+ // obj.bumper();
 
- obj.pass();
+  obj.pass();
   obj.starter();
-obj.swagat();
+ obj.swagat();
    obj.welcome();
     obj.registration();
 	ofstream of;
@@ -709,7 +729,7 @@ obj.swagat();
     obj.questions();
     obj.bumper();
   obj.thanks();
-
+   obj.showdetails();
     getch();
     return 0;
 }
